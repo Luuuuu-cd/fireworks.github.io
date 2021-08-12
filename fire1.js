@@ -1,4 +1,4 @@
-"use strict";
+="use strict";
 
 let canvas, width, height, ctx;
 let fireworks = [];
@@ -35,7 +35,7 @@ function loop(){
 		if(particles[i].lifetime>80) particles.splice(i,1);
 	}
 
-	if(Math.random()<1/60) fireworks.push(new Firework(Math.random()*(width-200)+100));
+	if(Math.random()<1/30) fireworks.push(new Firework(Math.random()*(width-200)+100));
 }
 setInterval(loop, 1/60);
 //setInterval(loop, 100/60);
@@ -52,8 +52,8 @@ class Particle{
 		this.x += this.vel.x;
 		this.y += this.vel.y;
 		this.vel.y += 0.05;
-		this.vel.x *= 1.1;
-		this.vel.y *= 1.1;
+		this.vel.x *= 1.01;
+		this.vel.y *= 1.01;
 		this.lifetime++;
 	}
 
