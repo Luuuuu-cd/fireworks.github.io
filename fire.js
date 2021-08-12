@@ -58,10 +58,10 @@ class Particle{
 	}
 
 	draw(){
-		ctx.globalAlpha = Math.max(1-this.lifetime/100, 0);
+		ctx.globalAlpha = Math.max(1-this.lifetime/500, 0);
 		ctx.fillStyle = this.col;
 		ctx.fillRect(this.x, this.y, 2, 2);
-		ctx.font = "28px serif";
+		ctx.font = "50px serif";
 		ctx.fillText("烟花", this.x, this.y);
 
 	}
@@ -76,7 +76,7 @@ class Firework{
 	}
 
 	update(){
-		this.y -= 2;
+		this.y -= 20;
 		if(this.y < 350-Math.sqrt(Math.random()*500)*40){
 			this.isBlown = true;
 			for(let i=0; i<60; i++){
@@ -143,7 +143,7 @@ function onClick(e){
 	ctx.globalAlpha = 1
 	ctx.font = "bold 100px serif";
 	ctx.fillStyle = "fuchsia";
-	ctx.fillText("啾咪💕", e.x,e.y);
+	ctx.fillText("啾咪♥", e.x,e.y);
 }
 
 function windowResized(){
