@@ -143,7 +143,7 @@ function onClick(e){
 	ctx.globalAlpha = 1
 	ctx.font = "bold 100px serif";
 	ctx.fillStyle = "fuchsia";
-	ctx.fillText("啾咪♥", e.x,e.y);
+	ctx.fillText("啾咪！！！", e.x,e.y);
 }
 
 function windowResized(){
