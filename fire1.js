@@ -51,9 +51,9 @@ class Particle{
 	update(){
 		this.x += this.vel.x;
 		this.y += this.vel.y;
-		this.vel.y += 0.1;
-		this.vel.x *= 1;
-		this.vel.y *= 0.99;
+		this.vel.y += 0.05;
+		this.vel.x *= 1.1;
+		this.vel.y *= 1.1;
 		this.lifetime++;
 	}
 
