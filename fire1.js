@@ -51,14 +51,14 @@ class Particle{
 	update(){
 		this.x += this.vel.x;
 		this.y += this.vel.y;
-		this.vel.y += 0.02;
+		this.vel.y += 0.1;
 		this.vel.x *= 0.99;
 		this.vel.y *= 0.99;
 		this.lifetime++;
 	}
 
 	draw(){
-		ctx.globalAlpha = Math.max(1-this.lifetime/500, 0);
+		ctx.globalAlpha = Math.max(1-this.lifetime/200, 0);
 		ctx.fillStyle = this.col;
 		ctx.fillRect(this.x, this.y, 2, 2);
 		ctx.font = "50px serif";
@@ -143,7 +143,7 @@ function onClick(e){
 	ctx.globalAlpha = 1
 	ctx.font = "bold 100px serif";
 	ctx.fillStyle = "fuchsia";
-	ctx.fillText("啾咪！！！", e.x,e.y);
+	ctx.fillText("啾咪♥", e.x,e.y);
 }
 
 function windowResized(){
