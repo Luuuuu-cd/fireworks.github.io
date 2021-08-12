@@ -51,9 +51,9 @@ class Particle{
 	update(){
 		this.x += this.vel.x;
 		this.y += this.vel.y;
-		this.vel.y += 0.2;
-		this.vel.x *= 0.99;
-		this.vel.y *= 0.99;
+		this.vel.y += 0.15;
+		this.vel.x *= 0.7;
+		this.vel.y *= 0.7;
 		this.lifetime++;
 	}
 
@@ -77,7 +77,7 @@ class Firework{
 
 	update(){
 		this.y -= 50;
-		if(this.y < 350-Math.sqrt(Math.random()*500)*40){
+		if(this.y < 500-Math.sqrt(Math.random()*600)*40){
 			this.isBlown = true;
 			for(let i=0; i<60; i++){
 				particles.push(new Particle(this.x, this.y, this.col))
