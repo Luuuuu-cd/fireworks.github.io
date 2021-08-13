@@ -51,9 +51,9 @@ class Particle{
 	update(){
 		this.x += this.vel.x;
 		this.y += this.vel.y;
-		this.vel.y += 0.05;
-		this.vel.x *= 1.01;
-		this.vel.y *= 1.01;
+		this.vel.y += 0.07;
+		this.vel.x *= 1.05;
+		this.vel.y *= 1.05;
 		this.lifetime++;
 	}
 
@@ -143,7 +143,7 @@ function onClick(e){
 	ctx.globalAlpha = 1
 	ctx.font = "bold 100px serif";
 	ctx.fillStyle = "fuchsia";
-	ctx.fillText("啾咪♥", e.x,e.y);
+	ctx.fillText("啾咪~", e.x,e.y);
 }
 
 function windowResized(){
