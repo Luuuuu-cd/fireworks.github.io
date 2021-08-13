@@ -1,4 +1,4 @@
-="use strict";
+"use strict";
 
 let canvas, width, height, ctx;
 let fireworks = [];
